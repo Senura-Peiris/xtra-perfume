@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.perfume-section2 {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title2 {
+  font-size: 3.5rem;
+  font-family: 'Prata', serif;
+  margin-bottom: 40px;
+  margin-top: -30px;
+}
+
+.section-title3 {
+  font-size: 3.5rem;
+  font-family: 'Sacramento', cursive;
+  color: #fcb900;
+  margin-top: -150px;
+}
+
+.carousel-wrapper2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow2 {
+  font-size: 1.5rem;
+  background: none;
+  border: 1px solid #a7a7a7;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  padding: 10px 15px;
+  margin-top: -260px;
+  
+  
+}
+
+.arrow2:hover {
+  background-color: black;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.left-arrow2 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-arrow2 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel2 {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slide2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.slide2.active2 {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s forwards;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.content2 {
+  flex: 1;
+  padding-right: 40px;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.content2 h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.content2 p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.price-button-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fcb900;
+}
+
+.buy-button2 {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.buy-button2:hover {
+  background-color: #fcb900;
+  color: black;
+}
+.image2 {
+  width: 480px;
+  height: 600px;
+  object-fit: cover;
+  margin-top: -60px;
+  z-index: 2;
+  position: relative;
+}
+
+/* ========== Responsive Styles for popular Perfumes component  ========== */
+@media (max-width: 780px) {
+  .carousel2 {
+    height: 90vh;
+    width: 100%;
+    max-width: 90vw;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+  .section-title2 {
+    font-size: 42px;
+  }
+
+  .section-title3 {
+    font-size: 2.5rem;
+    margin-top: -50px;
+  }
+ .arrow2{
+  margin-top: -380px;
+ }
+
+  .slide2 {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    min-height: 500px; 
+  }
+
+  .content2 {
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .image2 {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin-top: 0;
+  }
+
+  .price-button-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .arrow2 {
+    padding: 8px 12px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section-title2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title3 {
+    font-size: 1.5rem;
+    margin-top: -50px;
+  }
+
+  .carousel2 {
+    height: auto;
+    max-width: 95vw;
+  }
+
+  .slide2 {
+    flex-direction: column;
+    padding: 20px 10px;
+    min-height: 480px; 
+  }
+
+  .image2 {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    margin-top: 0;
+  }
+
+  .price2 {
+    font-size: 1.4rem;
+  }
+
+  .buy-button2 {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}

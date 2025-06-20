@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.products-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 50px;
+  color: #ffbb48;
+  font-family: Sacramento;
+  font-weight: 400;
+  margin-bottom: -25px;
+}
+
+.sub-heading {
+  color: #000000;
+  font-family: 'Prata';
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-size: 42px;
+  margin-top: -10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  transition: transform 0.2s ease;
+  height: 400px;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 290px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.hover-icons {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  background-color: black;
+  padding: 10px 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 5px;
+}
+
+.hover-icons svg {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hover-icons svg:hover {
+  transform: scale(1.2);
+  background-color: #ffbb48;
+  font-size: 18px;
+  color: black;
+}
+
+.product-card:hover .hover-icons,
+.product-card:hover .cart-btn-container {
+  opacity: 1;
+}
+
+.cart-btn-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
+  width: 180px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #ffbb48;
+  color: black;
+}
+
+.cart-icon {
+  font-size: 16px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.strike-price {
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+.discover-more-container {
+  margin-top: 40px;
+}
+
+.discover-more-btn {
+  padding: 12px 20px;
+  background-color: black;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.discover-more-btn:hover {
+  background-color: #ffbb48;
+  color: black;
+}
+.rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+  opacity: 0;  
+  transition: opacity 0.3s ease;  
+}
+
+.star {
+  color:#ffbb48;
+  font-size: 18px;
+}
+
+.product-card:hover .rating {
+  opacity: 1; 
+}
+.product-card {
+  background-color: #f9f9f9;
+  padding: 5px;
+  transition: transform 0.2s ease;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Responsive styles for products component */
+@media (min-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+  }
+
+  .main-heading {
+    font-size: 50px;
+  }
+
+  .sub-heading {
+    font-size: 42px;
+  }
+}
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px;
+  }
+  .product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+  
+
+  .main-heading {
+    font-size: 45px;
+  }
+
+  .sub-heading {
+    font-size: 36px;
+  }
+
+  .cart-btn {
+    width: 160px; 
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+@media (max-width: 780px) {
+  .products-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .main-heading {
+    font-size: 35px;
+  }
+
+  .sub-heading {
+    font-size: 30px;
+  }
+
+  .product-card {
+    height: auto;
+  }
+
+  .cart-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .discover-more-btn {
+    width: 100%; 
+    padding: 12px 25px;
+  }
+}
+

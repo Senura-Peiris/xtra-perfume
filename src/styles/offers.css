@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.offers-container {
+  background-color: #fff;
+  padding: 60px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+  max-width: 1100px;
+  margin: 60px auto 0;
+  height: 400px;
+  z-index: 1; 
+}
+
+.offers-container::before,
+.offers-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 700px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  background-image: url('https://i.pinimg.com/736x/e4/95/03/e4950324895eb5f6eddfe821aeb94a5f.jpg');
+  z-index: 0;
+}
+
+.offers-container::before {
+  left: 0;
+}
+
+.offers-container::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.offers-content h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-family: 'Prata';
+  z-index: 2;
+  position: relative;
+}
+
+.highlight {
+  color: #f5b64c;
+  font-weight: 600;
+}
+
+.offers-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.email-subscribe {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+.email-subscribe input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #f0f0f0;
+  border-radius: 3px 0 0 3px;
+  z-index: 2;
+}
+
+.email-subscribe button {
+  padding: 12px 24px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0 3px 3px 0;
+  z-index: 2;
+}
+
+.subbtn:hover {
+  background-color: #f5b64c;
+  color: black;
+  transition: all 0.3s ease;
+}

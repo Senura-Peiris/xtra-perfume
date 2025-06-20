@@ -1,0 +1,126 @@
+.sponsor {
+    background-color: #f9f9f9;
+    padding: 30px 20px 20px;
+    text-align: center;
+    font-family: 'Prata', serif;
+    margin-top: 40px;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  
+  .brand-name {
+    font-size: 28px;
+    font-weight: 600;
+    color: #222;
+    text-align: center;        
+    margin: 0 auto 70px auto;  
+    margin-left: 600px;
+  }
+  
+  .highlight {
+    color: #f5b64c;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #111;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f5b64c;
+  }
+  
+  .badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #444;
+    background-color: #f3f3f3;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+  
+  .badge img {
+    height: 40px;
+    width: 500px;
+    object-fit: contain;
+  }
+  
+  /* === Responsive Styles for Sponsor component === */
+  
+  @media (max-width: 768px) {
+    .brand-name {
+      font-size: 30px;
+      text-align: center;
+      margin-left: 70px;
+    }
+  
+    .nav-links {
+      gap: 20px;
+      font-size: 14px;
+    }
+  
+    .badge {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  
+    .badge img {
+      width: 350px;
+      height: 35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brand-name {
+      font-size: 20px;
+    }
+  
+    .nav-links {
+      gap: 12px;
+      font-size: 13px;
+    }
+  
+    .badge {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  
+    .badge img {
+      width: 130px;
+      height: 30px;
+    }
+  }
+  

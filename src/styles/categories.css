@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.men, .women {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    margin: 1%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.women {
+    margin-top: 80px;
+}
+
+.men img, .women img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.category1, .category2 {
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px 100px;
+    text-align: center;
+    color: black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 550px;
+}
+
+
+.category1 h1, .category2 h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+    font-family: 'Prata';
+}
+
+
+.c_body1, .c_body2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+.c_body1 h3, .c_body2 h3 {
+    font-size: 1rem;
+    color: #ffbb48;
+    margin: 0;
+    font-family: 'Prata', serif;
+}
+
+
+.btn1 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn1:hover a {
+    color: black;
+}
+
+.btn1:hover {
+    background-color:#ffbb48;
+    color: black;
+}
+
+
+.p_heading1 {
+    margin-top: 100px;
+    font-size: 42px;
+    font-family: 'Sacramento', cursive;
+    color: #fcb900;
+}
+.p_heading2{
+    font-size: 42px;
+    margin-bottom: 10px;
+    margin-top: -25px;
+}
+
+/* Adding Media queries for categories component responsiveness  */
+@media (max-width: 768px) {
+    .men, .women {
+        width: 100%;
+        margin-bottom: -20px;
+ 
+    }
+
+    .category1, .category2 {
+        padding: 20px;
+        max-width: 100%;
+        top: 80%;
+    }
+
+    .category1 h1, .category2 h1 {
+        font-size: 2rem;
+    }
+
+    .p_heading1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile Phones size responsiveness*/
+@media (max-width: 480px) {
+    .category1, .category2 {
+        padding: 15px;
+        top: 75%;
+    }
+
+    .category1 h1, .category2 h1 {
+        font-size: 1.8rem;
+    }
+
+    .c_body1, .c_body2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn1 {
+        padding: 8px 16px;
+    }
+
+    .p_heading1 {
+        font-size: 2rem;
+    }
+} 

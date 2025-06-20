@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.about {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Background  flower art  image styles here */
+.about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-image: url('https://i.pinimg.com/originals/b7/bf/bd/b7bfbd73188124e50d4c44e9e40fc997.jpg'); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1; 
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  border: none;
+  position: relative;
+  z-index: -1;
+}
+
+.paboutus {
+  font-family: 'Sacramento', 'cursive';
+  font-size: 70px;
+  color: black;
+  text-align: center;
+  margin-right: 390px;
+  margin-top: -80px;
+}
+
+.card-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.title {
+  font-size: 60px;
+  font-family: 'Prata', serif;
+  margin-bottom: 50px;
+}
+
+.title .change {
+  color: rgb(255, 187, 72);
+}
+
+.about_description {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.cardbutton1 {
+  margin-top: 50px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  align-self: flex-start;
+}
+
+.cardbutton1:hover {
+  background-color: #fcb900;
+  color: black;
+}
+
+.card-image {
+  width: 400px;
+  height: 510px;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive media queries for Aboutus component */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .card-content,
+  .card-image {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .cardbutton1 {
+    align-self: center;
+  }
+
+  .paboutus {
+    font-size: 60px;
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  .about::after {
+    width: 250px;
+    background-size: cover;
+    opacity: 0.08;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    text-align: center;
+   
+  }
+  .cardbutton1 {
+    margin-top:-2px ;
+  }
+  .card-image img{
+    margin-top: -60px;
+    z-index: 4;
+    width: 280px;
+  }
+
+  .about_description {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: -40px;
+  }
+
+  .paboutus {
+    font-size: 48px;
+    margin-bottom: -75px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .cardbutton1 {
+    padding: 8px 16px;
+  }
+
+  .paboutus {
+    font-size: 36px;
+    margin: 0 0 20px 0;
+  }
+
+  .about::after {
+    width: 200px;
+    opacity: 0.05;
+  }
+}

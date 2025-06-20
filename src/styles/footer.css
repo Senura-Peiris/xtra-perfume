@@ -1,0 +1,144 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'Prata', serif;
+  margin-top: 70px;
+  margin-bottom: -30px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #f5b64c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-circle-inner {
+  font-size: 18px;
+}
+
+.footer-center a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  color: #f5b64c;
+}
+
+.footer-right a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.scroll-top-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background-color: #f5b64c;
+}
+
+/* === Responsive Styles for footer component === */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .footer-left p {
+    font-size: 13px;
+    padding-left: 30px;
+  }
+
+  .footer-center a {
+    font-size: 14px;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+  .footer-right {
+    justify-content: space-between;
+    text-align: center;
+    padding-left: 100px;
+   
+  }
+
+  .scroll-top-btn {
+    width: 45px;
+    height: 30px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-circle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer-circle-inner {
+    font-size: 16px;
+  }
+
+  .footer-right a {
+    margin-right: 6px;
+    font-size: 13px;
+  }
+
+  .scroll-top-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}

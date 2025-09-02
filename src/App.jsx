@@ -12,7 +12,6 @@ import Specialperfume from './components/specialperfume';
 import Offers from './components/offers';
 import Sponsor from './components/sponsor';
 import Footer from './components/footer';
-import Timerpage from './components/Timerpage';
 import './App.css'
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
       <Offers/>
       <Sponsor/>
       <Footer/>
-      <Timerpage/>
     
     </div>
     </>

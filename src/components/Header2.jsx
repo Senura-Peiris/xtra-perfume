@@ -71,19 +71,21 @@ const Header2 = () => {
             <li><a href="#">CONTACT</a></li>
           </ul>
         </div>
-        <div className="navbar-right desktop-icons">
-          <div className='icons'>
-            <span className="icon-tag"><IoIosSearch /></span>
-            <span className="icon-tag"><IoIosHeartEmpty /></span>
-          </div>
+        <div className="navbar-right desktop-icons flex items-center space-x-4">
+  <div className="icons flex items-center space-x-2">
+    <span className="icon-tag text-3xl"><IoIosSearch /></span>
+<span className="icon-tag text-3xl"><IoIosHeartEmpty /></span>
 
-          <div className="icon-spacer" />
+  </div>
 
-          <button className="cart-btn">
-            <FaShoppingCart />
-            <span className="cart-text">Cart</span>
-          </button>
-        </div>
+  {/* Spacer if you want extra separation */}
+ 
+
+  <button className="cart-btn flex items-center space-x-1">
+    <FaShoppingCart />
+    <span className="cart-text">Cart</span>
+  </button>
+</div>
       </nav>
 
       {/* === Mobile Navigation Bar styles here === */}

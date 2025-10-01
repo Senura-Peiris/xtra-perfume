@@ -101,6 +101,7 @@
   width: 80px;
   height: 90px;
   object-fit: cover;
+  border-radius: 50%; /* makes it rounded/oval */
 }
 
 .review-role {

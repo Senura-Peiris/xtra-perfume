@@ -8,8 +8,10 @@ export class categories extends Component {
   render() {
     return (
       <div>
-        <h1 className="p_heading1">Categories</h1>
-        <h1 className="p_heading2">For Both Genders</h1>
+        <div className="flex flex-col items-center text-center">
+  <h1 className="p_heading1">Categories</h1>
+  <h1 className="p_heading2">For Both Genders</h1>
+</div>
         <div className="men">
         <img src={menImg} alt="Men image" />
           <div className="category1">

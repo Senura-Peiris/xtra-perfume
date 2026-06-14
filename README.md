@@ -5,5 +5,5 @@ This project is an clone website that I got during my internship periode to lear
 Technologies Used:
 1. React Js
 2. Tailwindcss
-
+<img src="" width="600px" height="500px">
 Click the Link to see the App: https://xtra-perfume-show.vercel.app/
